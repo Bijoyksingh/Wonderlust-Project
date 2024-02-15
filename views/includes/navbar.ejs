@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg  border-bottom sticky-top">
+    <div class="container-fluid" style="background-color: aquamarine;">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
       data-bs-target="#navbarNavAltMarkup">
@@ -9,19 +9,20 @@
         <div class="navbar-nav">
           
           <a class="nav-link" href="/listings">Explore</a>
+          <div class="search-bar">
+            <form class="d-flex" role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
           
         </div>  
-        <div class="search-bar ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+        
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new">Add your home in Wonderlust</a>
           <%if(!currUsr){%>
-<a class="btn btn-outline-success"  href="/signup">Sign Up</a>
-          <a class="btn btn-outline-primary" href="/login">Log In </a>
+<a class="btn btn-outline-success m-2"  href="/signup">Sign Up</a>
+          <a class="btn btn-outline-primary m-2" href="/login">Log In </a>
           <%}%>
           <%if(currUsr){%>
            <a class="btn btn-outline-danger" href="/logout">Log Out</a>
